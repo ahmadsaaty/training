@@ -12,17 +12,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <title>COVID-19 WORLD CASES</title>
+    <title>Countries of the World</title>
 </head>
 
 <body>
-    <div class="container bg-transparent">
+    <div id="flex" class="container bg-transparent">
 
         <div id="bg">
-            <img src="covid2.jpg">
+            <img src="w2.jpg">
         </div>
-        <h1 class="h1 text-center text-primary display-3"><abbr title="Coronavirus disease 2019">COVID-19</abbr> AROUND
-            THE WORLD </h1>
+        <h1 class="h1 text-center text-primary display-3 ">COUNTRIES AROUND THE WORLD </h1>
 
         <table id="newtable" align="center" class="">
             <tr>
@@ -36,19 +35,19 @@
                 </td>
 
                 <td>
-                    <button type="button" class="btn btn-primary" onclick=drawCard2()><b>GO</b></button>
+                    <button type="button" class="btn btn-primary " onclick=drawCard()><b>GO</b></button>
                 </td>
                 <td>
                     <button type="button" class="btn btn-danger" onclick=reset()><b>RESET</b></button>
                 </td>
             </tr>
         </table>
-        <div id='new' class=" ">
-
+        <div id='new' class="bg-transparent container">
         </div>
-        <script src="corona.js"></script>
-
     </div>
+
+
+    <script src="index.js"></script>
 </body>
 
 </html>

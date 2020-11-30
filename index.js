@@ -28,23 +28,18 @@ function drawCard() {
         if (search == lowercase) {
 
           let content = `
-          <div class="card bg-tranparent mb-3" style="max-width: 540px;">
-  <div class="row no-gutters bg-tranparent">
-    <div  class="col-md-4 bg-tranparent">
-      <img style="height:100%" src="Cflag" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8 bg-tranparent">
-      <div class="card-body bg-tranparent">
-        <h2 class="card-title  text-primary">CardTitle</h2>
-        <h4 class="card-text text-warning"><small>Cases:         text1</small></h4>
-        <h4 class="card-text text-success"><small>Recovered :    text2</small></h4>
-        <h4 class="card-text text-danger"><small>Deaths :       text3</small></h4>
-        <h4 class="card-text text-secondary"><small>Last updated : text4</small></h4>
-
-      </div>
-    </div>
-  </div>
-</div>`
+          <div class="card bg-white " style="width: 18rem;margin:5px;">
+            <img class="card-img-top" src="Cflag" alt="Card image cap">
+            <div class="card-body bg-transparent">
+              <h2 class="card-title text-primary">CardTitle</h5>
+              <h4 class="card-text text-warning"><small>Capital: text1</small></h4>
+              <h4 class="card-text text-success"><small>Region : text2</small></h4>
+              <h4 class="card-text text-danger"><small>population : text3</small></h4>
+              <h4 class="card-text text-secondary"><small>Native Name : text4</small></h4>
+              <a href="https://en.wikipedia.org/wiki/Cnames" target="_blank" class="btn btn-primary">Visit Wikipedia</a>
+            </div>
+          </div>
+`
 
 
           let x = document.createElement("div")
@@ -52,11 +47,11 @@ function drawCard() {
           let y = content.replace("Cflag", json[i].flag)
           y = y.replace("CardTitle", json[i].name)
 
-          y = y.replace("text1", json[i].infected)
-          y = y.replace("text2", json[i].recovered)
-          y = y.replace("text3", json[i].deceased)
-          y = y.replace("text4", json[i].lastUpdatedSource)
-
+          y = y.replace("text1", json[i].capital)
+          y = y.replace("text2", json[i].region)
+          y = y.replace("text3", json[i].population)
+          y = y.replace("text4", json[i].nativeName)
+          y = y.replace("Cnames", json[i].name)
 
 
 
@@ -65,6 +60,7 @@ function drawCard() {
 
           x.innerHTML = y
           x.id = "newitems"
+          x.className = "bg-transparent"
           document.getElementById("new").appendChild(x)
         }
       }
@@ -80,13 +76,13 @@ function drawCard2() {
   search = search.value;
   search = search.toLowerCase();
   let content = `
-          <div class="card bg-tranparent mb-3" style="max-width: 540px;">
-  <div class="row no-gutters bg-tranparent">
-    <div  class="col-md-4 bg-tranparent">
+          <div class="card bg-transparent mb-3" style="max-width: 540px;">
+  <div class="row no-gutters bg-transparent">
+    <div  class="col-md-4 bg-transparent">
       <img style="height:100%" src="Cflag" class="card-img" alt="...">
     </div>
-    <div class="col-md-8 bg-tranparent">
-      <div class="card-body bg-tranparent">
+    <div class="col-md-8 bg-transparent">
+      <div class="card-body bg-transparent">
         <h2 class="card-title  text-primary">CardTitle</h2>
         <h4 class="card-text text-warning"><small>Cases:         text1</small></h4>
         <h4 class="card-text text-success"><small>Recovered :    text2</small></h4>
