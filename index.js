@@ -1,4 +1,4 @@
-fetch('https://restcountries.eu/rest/v2/all')
+fetch('https://world-country.herokuapp.com/api/countries')
   .then(response => response.json())
   .then(json => {
     for (let i = 0; i < json.length; i++) {
@@ -18,7 +18,7 @@ function drawCard() {
   search = search.value;
   search = search.toLowerCase();
 
-  fetch('https://restcountries.eu/rest/v2/all')
+  fetch('https://world-country.herokuapp.com/api/countries')
     .then(response => response.json())
     .then(json => {
       for (let i = 0; i < json.length; i++) {
@@ -76,16 +76,14 @@ function reset() {
   if (counter > 0) {
     let search = document.getElementById('name');
     search.value = "";
-    fetch('https://restcountries.eu/rest/v2/all')
-      .then(response => response.json())
-      .then(json => {
-        for (let i = 0; i < counter; i++) {
-          let b = document.getElementById("newitems")
-          b.remove()
-        }
-        counter = 0;
-      }
-      )
+
+    for (let i = 0; i < counter; i++) {
+      let b = document.getElementById("newitems")
+      b.remove()
+    }
+    counter = 0;
+
+
   }
 
 }
